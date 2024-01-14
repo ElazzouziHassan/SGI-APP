@@ -1,73 +1,73 @@
 Utilisateur : (
-  INT : id, 
-  String : nom, 
-  String : prenom, 
-  Date : dateNaissance, 
-  String : email, 
-  String : telephone, 
+  INT : id 
+  String : nom 
+  String : prenom 
+  Date : dateNaissance 
+  String : email 
+  String : telephone 
   Bool : role
 )
 administrateur : (
-  INT : id, 
-  INT : utilisateur_id, 
-  String : username, 
+  INT : id 
+  INT : utilisateur_id 
+  String : username 
   String : password
 )
 Etudiant: (
-  INT : id,
-  INT : utilisateur_id,
-  String : username,
-  String : password,
-  String :CodeMassar,
-  String : CNIE,
+  INT : id
+  INT : utilisateur_id
+  String : username
+  String : password
+  String :CodeMassar
+  String : CNIE
   TEXT : adresse
 )  
 PersonnelAdministratif : (
-  INT : id, 
-  INT : utilisateur_id, 
-  String : username, 
+  INT : id 
+  INT : utilisateur_id 
+  String : username 
   String : password
 )
 Feedback : (
-  INT : id, 
-  INT : etudiant_id, 
+  INT : id 
+  INT : etudiant_id 
   TEXT : content
 )
 Documents : (
-  INT : id, 
-  INT : etudiant_id, 
-  String : documentBacV, 
-  String : documentBacR, 
-  String : documentDiplomeV, 
-  String : documentDiplomeR, 
-  String : documentCINV, 
-  String : documentCINR, 
-  String : documentRelvetNoteBac, 
-  String : documentRelNoteDip1anee, 
-  String : documentRelNoteDip2anee, 
-  String : photo, 
+  INT : id 
+  INT : etudiant_id 
+  String : documentBacV 
+  String : documentBacR 
+  String : documentDiplomeV 
+  String : documentDiplomeR 
+  String : documentCINV 
+  String : documentCINR 
+  String : documentRelvetNoteBac 
+  String : documentRelNoteDip1anee 
+  String : documentRelNoteDip2anee 
+  String : photo 
   String : demandeManuscript
 )
 <!-- Formulaire : (
   id, etudiant_id
 ) -->
 - Formation : (
-  INT : id, 
-  String : libelle, 
-  INT : duree, 
-  Date : date_debut, 
+  INT : id 
+  String : libelle 
+  INT : duree 
+  Date : date_debut 
   String : promotion
 )
 - Diplomes : (
-  INT : id, 
-  INT : etudiant_id, 
-  String : type, 
+  INT : id 
+  INT : etudiant_id 
+  String : type 
 ) 
 - inscription : (
-  id, 
-  INT : etudiant_id, 
-  INT : formation_id, 
-  INT : diplomes_id, 
-  INT : documents_id, 
-  Bool : status, 
+  INT : id 
+  INT : etudiant_id 
+  INT : formation_id 
+  INT : diplomes_id 
+  INT : documents_id 
+  Bool : status 
 )  
