@@ -7,6 +7,7 @@ import { RegisterComponent } from './pages/auth/register/register.component';
 import { LoginComponent } from './pages/auth/login/login.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { InscriptionComponent } from './pages/inscription/inscription.component';
+import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { InscriptionComponent } from './pages/inscription/inscription.component'
     RegisterComponent,
     LoginComponent,
     ProfileComponent,
-    InscriptionComponent
+    InscriptionComponent,
+    NotFoundPageComponent
   ],
   imports: [
     BrowserModule,
