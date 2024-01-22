@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { RegisterComponent } from './pages/auth/register/register.component';
 import { LoginComponent } from './pages/auth/login/login.component';
 import { ProfileComponent } from './pages/profile/profile.component';
+import { InscriptionComponent } from './pages/inscription/inscription.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
     LoginComponent,
-    ProfileComponent
+    ProfileComponent,
+    InscriptionComponent
   ],
   imports: [
     BrowserModule,
