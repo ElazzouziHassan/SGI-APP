@@ -8,8 +8,6 @@ import { LoginComponent } from './pages/auth/login/login.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { InscriptionComponent } from './pages/inscription/inscription.component';
 import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component';
-import { NavBarComponent } from './component/inscription/nav-bar/nav-bar.component';
-import { ResetPasswordComponent } from './pages/reset-password/reset-password.component';
 
 @NgModule({
   declarations: [
@@ -19,8 +17,6 @@ import { ResetPasswordComponent } from './pages/reset-password/reset-password.co
     ProfileComponent,
     InscriptionComponent,
     NotFoundPageComponent,
-    NavBarComponent,
-    ResetPasswordComponent
   ],
   imports: [
     BrowserModule,

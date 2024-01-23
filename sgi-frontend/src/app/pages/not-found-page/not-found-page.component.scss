@@ -1,0 +1,44 @@
+.not-found-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+
+  .card {
+    border: none;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .card-body {
+    padding: 40px;
+
+    h2 {
+      font-size: 1.8rem;
+      color: #333;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    .text-center {
+      margin-top: 20px;
+      font-size: 0.9rem;
+      color: #333;
+
+      a {
+        color: #3498db;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .not-found-section {
+    padding: 20px;
+  }
+}
