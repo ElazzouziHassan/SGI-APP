@@ -13,6 +13,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { NavBarComponent } from './component/nav-bar/nav-bar.component';
 import { AccueilComponent } from './pages/accueil/accueil.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { SideBarComponent } from './component/profile/side-bar/side-bar.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { ContactComponent } from './pages/contact/contact.component';
     NavBarComponent,
     AccueilComponent,
     ContactComponent,
+    SideBarComponent,
   ],
   imports: [
     BrowserModule,
