@@ -9,6 +9,7 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { InscriptionComponent } from './pages/inscription/inscription.component';
 import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component';
 import { ResetPasswordComponent } from './pages/auth/reset-password/reset-password.component';
+import { HomeComponent } from './pages/home/home.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { ResetPasswordComponent } from './pages/auth/reset-password/reset-passwo
     InscriptionComponent,
     NotFoundPageComponent,
     ResetPasswordComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
