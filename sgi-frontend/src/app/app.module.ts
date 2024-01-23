@@ -10,6 +10,7 @@ import { InscriptionComponent } from './pages/inscription/inscription.component'
 import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component';
 import { ResetPasswordComponent } from './pages/auth/reset-password/reset-password.component';
 import { HomeComponent } from './pages/home/home.component';
+import { NavBarComponent } from './component/nav-bar/nav-bar.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { HomeComponent } from './pages/home/home.component';
     NotFoundPageComponent,
     ResetPasswordComponent,
     HomeComponent,
+    NavBarComponent,
   ],
   imports: [
     BrowserModule,
