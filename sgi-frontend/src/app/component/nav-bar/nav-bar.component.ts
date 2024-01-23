@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrl: './nav-bar.component.scss'
 })
 export class NavBarComponent {
-
+  title = "EST SB"
 }
