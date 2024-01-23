@@ -11,6 +11,8 @@ import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.com
 import { ResetPasswordComponent } from './pages/auth/reset-password/reset-password.component';
 import { HomeComponent } from './pages/home/home.component';
 import { NavBarComponent } from './component/nav-bar/nav-bar.component';
+import { AccueilComponent } from './pages/accueil/accueil.component';
+import { ContactComponent } from './pages/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { NavBarComponent } from './component/nav-bar/nav-bar.component';
     ResetPasswordComponent,
     HomeComponent,
     NavBarComponent,
+    AccueilComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,
