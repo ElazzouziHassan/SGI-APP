@@ -8,6 +8,7 @@ import { LoginComponent } from './pages/auth/login/login.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { InscriptionComponent } from './pages/inscription/inscription.component';
 import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component';
+import { NavBarComponent } from './component/inscription/nav-bar/nav-bar.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.com
     LoginComponent,
     ProfileComponent,
     InscriptionComponent,
-    NotFoundPageComponent
+    NotFoundPageComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,
