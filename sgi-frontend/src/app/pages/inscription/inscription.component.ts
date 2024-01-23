@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrl: './inscription.component.scss'
 })
 export class InscriptionComponent {
-
+  
 }
