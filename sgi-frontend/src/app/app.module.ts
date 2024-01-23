@@ -8,6 +8,7 @@ import { LoginComponent } from './pages/auth/login/login.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { InscriptionComponent } from './pages/inscription/inscription.component';
 import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component';
+import { ResetPasswordComponent } from './pages/auth/reset-password/reset-password.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.com
     ProfileComponent,
     InscriptionComponent,
     NotFoundPageComponent,
+    ResetPasswordComponent,
   ],
   imports: [
     BrowserModule,
