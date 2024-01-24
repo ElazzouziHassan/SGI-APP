@@ -12,11 +12,11 @@ import { ResetPasswordComponent } from './pages/auth/reset-password/reset-passwo
 import { HomeComponent } from './pages/home/home.component';
 import { NavBarComponent } from './component/nav-bar/nav-bar.component';
 import { ContactComponent } from './pages/contact/contact.component';
-import { SideBarComponent } from './component/profile/side-bar/side-bar.component';
 import { FormationComponent } from './pages/formation/formation.component';
 import { HeroComponent } from './component/formation/hero/hero.component';
 import { FormationCardComponent } from './component/formation/formation-card/formation-card.component';
 import { FormationFooterComponent } from './component/formation/formation-footer/formation-footer.component';
+import { SideBarComponent } from './component/side-bar/side-bar.component';
 
 @NgModule({
   declarations: [
@@ -30,11 +30,11 @@ import { FormationFooterComponent } from './component/formation/formation-footer
     HomeComponent,
     NavBarComponent,
     ContactComponent,
-    SideBarComponent,
     FormationComponent,
     HeroComponent,
     FormationCardComponent,
     FormationFooterComponent,
+    SideBarComponent,
   ],
   imports: [
     BrowserModule,
