@@ -16,6 +16,7 @@ import { SideBarComponent } from './component/profile/side-bar/side-bar.componen
 import { FormationComponent } from './pages/formation/formation.component';
 import { HeroComponent } from './component/formation/hero/hero.component';
 import { FormationCardComponent } from './component/formation/formation-card/formation-card.component';
+import { FormationFooterComponent } from './component/formation/formation-footer/formation-footer.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { FormationCardComponent } from './component/formation/formation-card/for
     FormationComponent,
     HeroComponent,
     FormationCardComponent,
+    FormationFooterComponent,
   ],
   imports: [
     BrowserModule,
