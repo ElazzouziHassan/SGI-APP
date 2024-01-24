@@ -1,0 +1,35 @@
+/* formation-card.component.scss */
+
+.card {
+  border: none;
+  transition: transform 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  img {
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .card-title {
+    font-size: 1.5rem;
+    margin-top: 10px;
+  }
+
+  .card-text {
+    font-size: 1rem;
+    color: #555;
+  }
+
+  .btn-primary {
+    background-color: #3498db;
+    border: none;
+    margin-top: 10px;
+  }
+
+  .btn-primary:hover {
+    background-color: #2980b9;
+  }
+}
