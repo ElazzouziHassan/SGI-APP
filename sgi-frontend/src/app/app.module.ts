@@ -14,6 +14,7 @@ import { NavBarComponent } from './component/nav-bar/nav-bar.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { SideBarComponent } from './component/profile/side-bar/side-bar.component';
 import { FormationComponent } from './pages/formation/formation.component';
+import { HeroComponent } from './component/formation/hero/hero.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { FormationComponent } from './pages/formation/formation.component';
     ContactComponent,
     SideBarComponent,
     FormationComponent,
+    HeroComponent,
   ],
   imports: [
     BrowserModule,
