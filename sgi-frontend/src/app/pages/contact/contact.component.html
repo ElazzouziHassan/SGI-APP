@@ -1,1 +1,32 @@
-<p>contact works!</p>
+<!-- contact.component.html -->
+
+<section class="contact-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or inquiries, feel free to reach out to us.</p>
+        <p><strong>Email:</strong> {{ 'estsb.info@contact.com' }}</p>
+        <p><strong>Phone:</strong> +1 123 456 7890</p>
+        <p><strong>Address:</strong> Your University, Street Address, City, Country</p>
+      </div>
+      <div class="col-md-6">
+        <form>
+          <div class="mb-3">
+            <label for="name" class="form-label">Your Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter your name">
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Your Email</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter your email">
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Your Message</label>
+            <textarea class="form-control" id="message" rows="5" placeholder="Enter your message"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

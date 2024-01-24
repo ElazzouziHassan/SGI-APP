@@ -1,0 +1,36 @@
+/* contact.component.scss */
+
+.contact-section {
+  padding: 50px 0;
+
+  h2 {
+    font-size: 2.5rem;
+    color: #333;
+  }
+
+  p {
+    font-size: 1rem;
+    color: #555;
+  }
+
+  form {
+    margin-top: 30px;
+
+    .form-label {
+      color: #333;
+    }
+
+    .form-control {
+      margin-bottom: 15px;
+    }
+
+    .btn-primary {
+      background-color: #3498db;
+      border: none;
+    }
+
+    .btn-primary:hover {
+      background-color: #2980b9;
+    }
+  }
+}
