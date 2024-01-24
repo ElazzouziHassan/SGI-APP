@@ -20,7 +20,7 @@ const routes: Routes = [
     children:[
       {path:'inscription',title:'Inscrit to EST SB | UCD EL JADIDA', component: InscriptionComponent},
       {path:'profile',title:'Welcome To Your Profile  | EST SB', component: ProfileComponent},
-      {path:'accueil',title:'Welcome ! | EST SB', component: AccueilComponent},
+      {path:'',title:'Welcome ! | EST SB', component: AccueilComponent},
       {path:'contact',title:'Contactez-nous | EST SB', component: ContactComponent},
     ]
   },
