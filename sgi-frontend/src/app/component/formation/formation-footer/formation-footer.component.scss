@@ -1,36 +1,15 @@
-/* footer.component.scss */
-
 .footer-section {
   background-color: #333;
   color: #fff;
-  padding: 30px 0;
-
-  h4 {
-    color: #fff;
-  }
-
+  padding: 10px 1rem;
+  
   p {
     color: #aaa;
   }
 
-  .social-icons {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-
-    li {
-      display: inline-block;
-      margin-right: 10px;
-
-      a {
-        color: #fff;
-        font-size: 1.5rem;
-        transition: color 0.3s ease-in-out;
-
-        &:hover {
-          color: #3498db;
-        }
-      }
-    }
+  .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 }
