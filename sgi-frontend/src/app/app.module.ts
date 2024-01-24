@@ -11,7 +11,6 @@ import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.com
 import { ResetPasswordComponent } from './pages/auth/reset-password/reset-password.component';
 import { HomeComponent } from './pages/home/home.component';
 import { NavBarComponent } from './component/nav-bar/nav-bar.component';
-import { AccueilComponent } from './pages/accueil/accueil.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { SideBarComponent } from './component/profile/side-bar/side-bar.component';
 import { FormationComponent } from './pages/formation/formation.component';
@@ -27,7 +26,6 @@ import { FormationComponent } from './pages/formation/formation.component';
     ResetPasswordComponent,
     HomeComponent,
     NavBarComponent,
-    AccueilComponent,
     ContactComponent,
     SideBarComponent,
     FormationComponent,
