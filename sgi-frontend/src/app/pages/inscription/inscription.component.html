@@ -1,1 +1,34 @@
-<h1>inscription page</h1>
+<!-- subscription.component.html -->
+
+<section class="subscription-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h2>Subscribe to a Formation</h2>
+        <p>Choose the formation you want to subscribe to and fill in the required information.</p>
+        <form>
+          <div class="mb-3">
+            <label for="formation" class="form-label">Select Formation</label>
+            <!-- Add a dropdown to select the formation -->
+            <select class="form-control" id="formation">
+              <option value="ISITW">ISITW - Information Systems</option>
+              <option value="CS">CS - Computer Science</option>
+              <option value="MR">MR - Media and Communication</option>
+              <option value="FCT">FCT - Finance and Business</option>
+              <option value="MNG">MNG - Management</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="name" class="form-label">Your Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter your name">
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Your Email</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter your email">
+          </div>
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
