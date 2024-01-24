@@ -15,6 +15,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { SideBarComponent } from './component/profile/side-bar/side-bar.component';
 import { FormationComponent } from './pages/formation/formation.component';
 import { HeroComponent } from './component/formation/hero/hero.component';
+import { FormationCardComponent } from './component/formation/formation-card/formation-card.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { HeroComponent } from './component/formation/hero/hero.component';
     SideBarComponent,
     FormationComponent,
     HeroComponent,
+    FormationCardComponent,
   ],
   imports: [
     BrowserModule,
