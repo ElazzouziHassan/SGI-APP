@@ -2,11 +2,16 @@
 
 .navbar {
   background-color: #3498db;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-brand {
   // color: #fff;
   font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .navbar-toggler-icon {
