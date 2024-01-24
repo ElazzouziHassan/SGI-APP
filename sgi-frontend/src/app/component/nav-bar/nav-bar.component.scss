@@ -41,19 +41,20 @@
   }
 
   .navbar-collapse {
-    background-color: #3498db;
+    background-color: #9aa3aa;
     padding: 10px;
+    border-radius: 5px;
   }
 
   .navbar-nav .nav-item {
-    margin: 10px 0;
+    margin: 10px 4px;
 
     a {
       // color: #fff;
       text-decoration: none;
 
       &:hover {
-        // color: #ecf0f1;
+        color: #ecf0f1;
       }
     }
   }
