@@ -9,6 +9,7 @@ import { ResetPasswordComponent } from './pages/auth/reset-password/reset-passwo
 import { HomeComponent } from './pages/home/home.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { FormationComponent } from './pages/formation/formation.component';
+import { PersonalInfoComponent } from './component/personal-info/personal-info.component';
 
 
 const routes: Routes = [
@@ -18,7 +19,13 @@ const routes: Routes = [
   {
     path:'home',title:'Welcome to EST SB | UCD EL JADIDA', component: HomeComponent,
     children:[
-      {path:'inscription',title:'Inscrit to EST SB | UCD EL JADIDA', component: InscriptionComponent},
+      {
+        path:'inscription',title:'Inscrit to EST SB | UCD EL JADIDA', component: InscriptionComponent,
+        children: [
+          { path: 'personal-info', component: PersonalInfoComponent },
+        ]
+        
+      },
       {path:'profile',title:'Welcome To Your Profile  | EST SB', component: ProfileComponent},
       {path:'',title:'Notre Formations | EST SB', component: FormationComponent},
       {path:'contact',title:'Contactez-Nous | EST SB', component: ContactComponent},
