@@ -1,6 +1,4 @@
-/* sidebar.component.scss */
-
-.sidebar {
+.sidebar{
   height: 100%;
   width: 250px;
   position: fixed;
@@ -9,17 +7,22 @@
   background-color: #333;
   padding-top: 20px;
   color: #fff;
-}
+  .sidebar-header{
+    text-align: center;
+    margin-bottom: 20px;
+    h4{
 
-.sidebar-header {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.nav-link {
-  color: #fff;
-}
-
-.nav-link:hover {
-  color: #3498db;
+    }
+  }
+  .nav{
+    .nav-item{
+      .nav-link{
+        color: #fff;
+        &:hover{
+          color: #3498db;
+        }
+      }
+    }
+  }
+  .flex-colum{}
 }
