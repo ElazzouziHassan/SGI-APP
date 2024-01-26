@@ -13,6 +13,14 @@ return new class extends Migration
     {
         Schema::create('baccalaureats', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('etudiant_id')->constrained();
+            $table->string('Etablissement');
+            $table->string('Direction_provinciale');
+            $table->date('Session');
+            $table->string('Serie');
+            $table->string('Filiere');
+            $table->string('Mention');
+            $table->integer('Moyene_generale');
             $table->timestamps();
         });
     }
