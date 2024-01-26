@@ -1,13 +1,23 @@
-section{
-  form{
-    .nom-complet{
-      display: flex;
-      gap: 20px;
-      justify-content: space-between;
-      align-content: center;
-      .nom-complet-ar{
-        float: right;
-      }
-    }
+/* styles.scss */
+
+/* Custom styles for responsiveness */
+@media (max-width: 640px) {
+  /* Small Screen Styles */
+  body {
+    padding: 10px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1007px) {
+  /* Medium Screen Styles */
+  body {
+    padding: 20px;
+  }
+}
+
+@media (min-width: 1008px) {
+  /* Large Screen Styles */
+  body {
+    padding: 30px;
   }
 }
