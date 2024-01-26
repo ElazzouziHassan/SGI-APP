@@ -18,31 +18,89 @@ import { ReviewValidateComponent } from './component/review-validate/review-vali
 
 
 const routes: Routes = [
-  {path:'login', title:'Login to EST SB | UCD EL JADIDA', component: LoginComponent},
-  {path:'reset-password', title:'Reset Your Password | EST SB', component: ResetPasswordComponent},
-  {path:'registration',title:'Register to EST SB | UCD EL JADIDA', component: RegisterComponent},
   {
-    path:'home',title:'Welcome to EST SB | UCD EL JADIDA', component: HomeComponent,
+    path:'login', 
+    title:'Login to EST SB | UCD EL JADIDA', 
+    component: LoginComponent
+  },
+  {
+    path:'reset-password', 
+    title:'Reset Your Password | EST SB', 
+    component: ResetPasswordComponent
+  },
+  {
+    path:'registration',
+    title:'Register to EST SB | UCD EL JADIDA', 
+    component: RegisterComponent
+  },
+  {
+    path:'home',
+    title:'Welcome to EST SB | UCD EL JADIDA', 
+    component: HomeComponent,
     children:[
       {
-        path:'inscription',title:'Inscrit to EST SB | UCD EL JADIDA', component: InscriptionComponent,
+        path:'inscription', component: InscriptionComponent,
         children: [
-          { path: '', component: PersonalInfoComponent },
-          { path: 'baccalaureat-info', component: BaccalaureatInfoComponent },
-          { path: 'diplome-info', component: DiplomeInfoComponent },
-          { path: 'submission-docs', component: SubmissionDocsComponent },
-          { path: 'choix-formation', component: ChoixFormationComponent },
-          { path: 'review-validate', component: ReviewValidateComponent },
+          { 
+            path: '', 
+            title:'Inscrit to EST SB | Informations Personnelles', 
+            component: PersonalInfoComponent 
+          },
+          { 
+            path: 'baccalaureat-info', 
+            component: BaccalaureatInfoComponent,
+            title:'Inscrit to EST SB | Informations Baccalauréat', 
+          },
+          { 
+            path: 'diplome-info', 
+            component: DiplomeInfoComponent,
+            title:'Inscrit to EST SB | Informations Dilome', 
+          },
+          { 
+            path: 'submission-docs', 
+            component: SubmissionDocsComponent,
+            title:'Inscrit to EST SB | Submission Des Documents', 
+          },
+          { 
+            path: 'choix-formation', 
+            component: ChoixFormationComponent,
+            title:'Inscrit to EST SB | Choix Du Formation', 
+          },
+          { 
+            path: 'review-validate', 
+            component: ReviewValidateComponent,
+            title:'Inscrit to EST SB | Review & Validation', 
+          },
         ]
         
       },
-      {path:'profile',title:'Welcome To Your Profile  | EST SB', component: ProfileComponent},
-      {path:'',title:'Notre Formations | EST SB', component: FormationComponent},
-      {path:'contact',title:'Contactez-Nous | EST SB', component: ContactComponent},
+      {
+        path:'profile',
+        title:'Welcome To Your Profile  | EST SB', 
+        component: ProfileComponent
+      },
+      {
+        path:'',
+        title:'Notre Formations | EST SB', 
+        component: FormationComponent
+      },
+      {
+        path:'contact',
+        title:'Contactez-Nous | EST SB', 
+        component: ContactComponent
+      },
     ]
   },
-  { path: '', redirectTo: 'login', pathMatch: 'full' },
-  {path: '**', title:'Error ! | Page Not Found', component: NotFoundPageComponent},
+  { 
+    path: '', 
+    redirectTo: 'login', 
+    pathMatch: 'full' 
+  },
+  {
+    path: '**', 
+    title:'Error ! | Page Not Found', 
+    component: NotFoundPageComponent
+  },
 ];
 
 @NgModule({
