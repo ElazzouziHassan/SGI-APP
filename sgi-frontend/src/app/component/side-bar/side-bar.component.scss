@@ -1,23 +1,15 @@
 .sidebar{
-  height: 100%;
-  width: 250px;
-  position: fixed;
-  top: 7vh;
-  left: 0;
-  background-color: #747b80;
-  padding-top: 20px;
-  color: #fff;
+  
   .sidebar-header{
-    text-align: center;
-    margin-bottom: 20px;
+    
     h4{
-      color:#EEF5FF
+      
     }
   }
   .nav{
     .nav-item{
       .nav-link{
-        color: #fff;
+        
         &:hover{
           color: #3498db;
         }
