@@ -10,6 +10,11 @@ import { HomeComponent } from './pages/home/home.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { FormationComponent } from './pages/formation/formation.component';
 import { PersonalInfoComponent } from './component/personal-info/personal-info.component';
+import { BaccalaureatInfoComponent } from './component/baccalaureat-info/baccalaureat-info.component';
+import { DiplomeInfoComponent } from './component/diplome-info/diplome-info.component';
+import { SubmissionDocsComponent } from './component/submission-docs/submission-docs.component';
+import { ChoixFormationComponent } from './component/choix-formation/choix-formation.component';
+import { ReviewValidateComponent } from './component/review-validate/review-validate.component';
 
 
 const routes: Routes = [
@@ -22,7 +27,12 @@ const routes: Routes = [
       {
         path:'inscription',title:'Inscrit to EST SB | UCD EL JADIDA', component: InscriptionComponent,
         children: [
-          { path: 'personal-info', component: PersonalInfoComponent },
+          { path: '', component: PersonalInfoComponent },
+          { path: 'baccalaureat-info', component: BaccalaureatInfoComponent },
+          { path: 'diplome-info', component: DiplomeInfoComponent },
+          { path: 'submission-docs', component: SubmissionDocsComponent },
+          { path: 'choix-formation', component: ChoixFormationComponent },
+          { path: 'review-validate', component: ReviewValidateComponent },
         ]
         
       },
