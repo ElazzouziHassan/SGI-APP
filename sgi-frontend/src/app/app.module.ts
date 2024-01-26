@@ -18,6 +18,11 @@ import { FormationCardComponent } from './component/formation/formation-card/for
 import { FormationFooterComponent } from './component/formation/formation-footer/formation-footer.component';
 import { SideBarComponent } from './component/side-bar/side-bar.component';
 import { PersonalInfoComponent } from './component/personal-info/personal-info.component';
+import { BaccalaureatInfoComponent } from './component/baccalaureat-info/baccalaureat-info.component';
+import { DiplomeInfoComponent } from './component/diplome-info/diplome-info.component';
+import { SubmissionDocsComponent } from './component/submission-docs/submission-docs.component';
+import { ChoixFormationComponent } from './component/choix-formation/choix-formation.component';
+import { ReviewValidateComponent } from './component/review-validate/review-validate.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +42,11 @@ import { PersonalInfoComponent } from './component/personal-info/personal-info.c
     FormationFooterComponent,
     SideBarComponent,
     PersonalInfoComponent,
+    BaccalaureatInfoComponent,
+    DiplomeInfoComponent,
+    SubmissionDocsComponent,
+    ChoixFormationComponent,
+    ReviewValidateComponent,
   ],
   imports: [
     BrowserModule,
