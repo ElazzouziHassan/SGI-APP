@@ -1,0 +1,13 @@
+section{
+  form{
+    .nom-complet{
+      display: flex;
+      gap: 20px;
+      justify-content: space-between;
+      align-content: center;
+      .nom-complet-ar{
+        float: right;
+      }
+    }
+  }
+}
