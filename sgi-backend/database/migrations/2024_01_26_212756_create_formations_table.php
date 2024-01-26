@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('formations', function (Blueprint $table) {
             $table->id();
+            $table->string('Filiere');
+            $table->integer('nb_etudiants');
+            $table->integer('duree');
+            $table->date('date_debut');
+            $table->string('promotion');
             $table->timestamps();
         });
     }
