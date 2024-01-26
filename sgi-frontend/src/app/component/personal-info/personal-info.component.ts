@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrl: './personal-info.component.scss'
 })
 export class PersonalInfoComponent {
-
+  
 }
