@@ -13,6 +13,19 @@ return new class extends Migration
     {
         Schema::create('diplomes', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('etudiant_id')->constrained();
+            $table->string('Etablissement');
+            $table->string('Direction_provinciale');
+            $table->date('Promotion');
+            $table->string('type');
+            $table->string('Specialite');
+            $table->integer('nb_annees');
+            $table->integer('Moyene_s1');
+            $table->integer('Moyene_s2');
+            $table->integer('Moyene_s3');
+            $table->integer('Moyene_s4');
+            $table->integer('Moyene_generale');
+            $table->integer('nb_mention');
             $table->timestamps();
         });
     }
