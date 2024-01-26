@@ -71,8 +71,7 @@ const routes: Routes = [
             component: ReviewValidateComponent,
             title:'Inscrit to EST SB | Review & Validation', 
           },
-        ]
-        
+        ] 
       },
       {
         path:'profile',
