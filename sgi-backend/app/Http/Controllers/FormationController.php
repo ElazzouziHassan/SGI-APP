@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Formation;
 use Illuminate\Http\Request;
 
 class FormationController extends Controller
@@ -11,7 +12,8 @@ class FormationController extends Controller
      */
     public function index()
     {
-        //
+        $formations = Formation::all();
+        return response()->json(['formations' => $formations], 200);
     }
 
     /**
@@ -27,7 +29,24 @@ class FormationController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'Filiere' => 'required|string',
+            'nb_etudiants' => 'required|integer',
+            'duree' => 'required|integer',
+            'date_debut' => 'required|date',
+            'promotion' => 'required|string',
+        ]);
+
+        $formation = new Formation();
+        $formation->Filiere = $request->input('Filiere');
+        $formation->nb_etudiants = $request->input('nb_etudiants');
+        $formation->duree = $request->input('duree');
+        $formation->date_debut = $request->input('date_debut');
+        $formation->promotion = $request->input('promotion');
+
+        $formation->save();
+
+        return response()->json(['formation' => $formation], 201);
     }
 
     /**
@@ -35,7 +54,13 @@ class FormationController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $formation = Formation::find($id);
+
+        if (!$formation) {
+            return response()->json(['error' => 'Formation not found'], 404);
+        }
+
+        return response()->json(['formation' => $formation], 200);
     }
 
     /**
@@ -51,7 +76,29 @@ class FormationController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $formation = Formation::find($id);
+
+        if (!$formation) {
+            return response()->json(['error' => 'Formation not found'], 404);
+        }
+
+        $request->validate([
+            'Filiere' => 'required|string',
+            'nb_etudiants' => 'required|integer',
+            'duree' => 'required|integer',
+            'date_debut' => 'required|date',
+            'promotion' => 'required|string',
+        ]);
+
+        $formation->Filiere = $request->input('Filiere');
+        $formation->nb_etudiants = $request->input('nb_etudiants');
+        $formation->duree = $request->input('duree');
+        $formation->date_debut = $request->input('date_debut');
+        $formation->promotion = $request->input('promotion');
+
+        $formation->save();
+
+        return response()->json(['formation' => $formation], 200);
     }
 
     /**
@@ -59,6 +106,14 @@ class FormationController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $formation = Formation::find($id);
+
+        if (!$formation) {
+            return response()->json(['error' => 'Formation not found'], 404);
+        }
+
+        $formation->delete();
+
+        return response()->json(['message' => 'Formation deleted successfully'], 200);
     }
 }
