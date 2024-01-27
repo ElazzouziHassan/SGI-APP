@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('diplomes', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('etudiant_id')->constrained();
+            $table->foreignId('user_id')->constrained();
             $table->string('Etablissement');
             $table->string('Direction_provinciale');
             $table->date('Promotion');
