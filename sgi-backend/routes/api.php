@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\EtudiantController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,8 +22,26 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::group(['middleware' => 'api'], function ($router) {
 
     Route::post('login', [AuthController::class, 'login']);
-    Route::post('logout', 'AuthController@logout');
-    Route::post('refresh', 'AuthController@refresh');
-    Route::post('me', 'AuthController@me');
+    Route::post('logout', [AuthController::class, 'logout']);
+    Route::post('refresh', [AuthController::class, 'refresh']);
+    Route::post('me', [AuthController::class, 'me']);
 
+});
+
+
+Route::group(['middleware' => 'jwt.verify'], function () {
+    // Get all students
+    Route::get('etudiants',[EtudiantController::class, 'index']);
+    
+    // Get a single student by ID
+    Route::get('etudiants/{id}',[EtudiantController::class, 'show']);
+    
+    // Create a new student
+    Route::get('etudiants',[EtudiantController::class, 'store']);
+    
+    // Update a student by ID
+    Route::get('etudiants/{id}',[EtudiantController::class, 'update']);
+    
+    // Delete a student by ID
+    Route::get('etudiants{id}',[EtudiantController::class, 'destroy']);
 });
