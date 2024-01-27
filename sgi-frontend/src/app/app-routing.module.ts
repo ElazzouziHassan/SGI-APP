@@ -23,16 +23,16 @@ const routes: Routes = [
     title:'Login to EST SB | UCD EL JADIDA', 
     component: LoginComponent
   },
-  {
-    path:'reset-password', 
-    title:'Reset Your Password | EST SB', 
-    component: ResetPasswordComponent
-  },
-  {
-    path:'registration',
-    title:'Register to EST SB | UCD EL JADIDA', 
-    component: RegisterComponent
-  },
+  // {
+  //   path:'reset-password', 
+  //   title:'Reset Your Password | EST SB', 
+  //   component: ResetPasswordComponent
+  // },
+  // {
+  //   path:'registration',
+  //   title:'Register to EST SB | UCD EL JADIDA', 
+  //   component: RegisterComponent
+  // },
   {
     path:'home',
     title:'Welcome to EST SB | UCD EL JADIDA', 
