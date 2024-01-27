@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Etudiant;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
+
 
 class EtudiantController extends Controller
 {
@@ -11,7 +14,8 @@ class EtudiantController extends Controller
      */
     public function index()
     {
-        //
+        $etudiants = Etudiant::all();
+        return response()->json(['etudiants' => $etudiants]);
     }
 
     /**
@@ -27,7 +31,25 @@ class EtudiantController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validator = Validator::make($request->all(), [
+            'name' => 'required|string',
+            'email' => 'required|email|unique:students',
+            'phone' => 'required|string',
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json(['error' => $validator->errors()], 422);
+        }
+
+        $student = new Etudiant([
+            'name' => $request->input('name'),
+            'email' => $request->input('email'),
+            'phone' => $request->input('phone'),
+        ]);
+
+        $student->save();
+
+        return response()->json(['message' => 'Student created', 'student' => $student], 201);
     }
 
     /**
@@ -35,7 +57,13 @@ class EtudiantController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $etudiant = Etudiant::find($id);
+
+        if (!$etudiant) {
+            return response()->json(['error' => 'etudiant not found'], 404);
+        }
+
+        return response()->json(['etudiant' => $etudiant]);
     }
 
     /**
