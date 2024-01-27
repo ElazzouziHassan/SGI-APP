@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('documents', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('etudiant_id')->constrained();
+            $table->foreignId('user_id')->constrained();
             $table->string('documentBacV');
             $table->string('documentBacR');
             $table->string('documentDiplome');
