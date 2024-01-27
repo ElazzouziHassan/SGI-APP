@@ -37,3 +37,11 @@ Route::resource('formations', FormationController::class);
 Route::resource('diplomes', DiplomesController::class);
 Route::resource('baccalaureats', BaccalaureatsController::class);
 Route::resource('inscriptions', InscriptionsController::class);
+
+Route::middleware(['auth'])->group(function () {
+    // Routes that require authentication
+});
+
+Route::middleware(['auth', 'can:admin'])->group(function () {
+    // Routes that require the 'admin' permission
+});
