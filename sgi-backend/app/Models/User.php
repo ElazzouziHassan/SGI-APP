@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use League\CommonMark\Node\Block\Document;
 
 class User extends Authenticatable
 {
@@ -18,9 +19,8 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
-        'email',
-        'password',
+        'nom_fr', 'nom_ar', 'prenom_fr', 'prenom_ar', 'dateNaissance',
+        'email', 'password', 'telephone', 'CodeMassar', 'CIN', 'adresse_fr', 'adresse_ar', 'role',
     ];
 
     /**
@@ -32,6 +32,30 @@ class User extends Authenticatable
         'password',
         'remember_token',
     ];
+    public function feedback()
+    {
+        return $this->hasMany(Feedback::class);
+    }
+
+    public function documents()
+    {
+        return $this->hasMany(Document::class);
+    }
+
+    public function diplomes()
+    {
+        return $this->hasOne(Diplomes::class);
+    }
+
+    public function baccalaureat()
+    {
+        return $this->hasOne(Baccalaureats::class);
+    }
+
+    public function inscription()
+    {
+        return $this->hasOne(Inscriptions::class);
+    }
 
     /**
      * The attributes that should be cast.
