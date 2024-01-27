@@ -19,8 +19,31 @@ class User extends Authenticatable implements JWTSubject
      * @var array<int, string>
      */
     protected $fillable = [
-        
+        'nom_fr', 
+        'nom_ar', 
+        'prenom_fr', 
+        'prenom_ar', 
+        'dateNaissance', 
+        'email', 
+        'telephone', 
+        'role',
+        'email_verified_at',
+        'password'
     ];
+    public function administrateur()
+    {
+        return $this->hasOne(Administrateur::class);
+    }
+
+    public function etudiant()
+    {
+        return $this->hasOne(Etudiant::class);
+    }
+
+    public function servicesEtudiant()
+    {
+        return $this->hasOne(ServicesEtudiant::class);
+    }
 
     /**
      * The attributes that should be hidden for serialization.
