@@ -15,7 +15,6 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained();
             $table->string('email')->unique();
-            $table->string('password');
             $table->string('CodeMassar')->unique();
             $table->string('CIN')->unique();
             $table->text('adresse_fr');
