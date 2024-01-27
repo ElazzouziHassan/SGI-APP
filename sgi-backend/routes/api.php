@@ -17,3 +17,12 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::resource('users', 'UserController');
+Route::resource('feedback', 'FeedbackController');
+Route::resource('documents', 'DocumentController');
+Route::resource('formations', 'FormationController');
+Route::resource('inscriptions', 'InscriptionController');
+Route::resource('baccalaureats', 'BaccalaureatController');
+Route::resource('diplomes', 'DiplomeController');
+
