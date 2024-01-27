@@ -24,13 +24,11 @@ return new class extends Migration
                 'role',['admin', 'service_etudiant', 'etudiant']
             )->default('etudiant');
             $table->timestamp('email_verified_at')->nullable();
-            $table->string('email')->unique();
             $table->string('CodeMassar')->unique();
             $table->string('CIN')->unique();
             $table->text('adresse_fr');
             $table->text('adresse_ar');
             $table->string('password');
-            $table->timestamp('email_verified_at')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
