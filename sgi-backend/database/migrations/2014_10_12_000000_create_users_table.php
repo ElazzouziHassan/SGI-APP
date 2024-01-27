@@ -20,8 +20,15 @@ return new class extends Migration
             $table->date('dateNaissance');
             $table->string('email')->unique();
             $table->string('telephone');
-            $table->boolean('role');
+            $table->enum(
+                'role',['admin', 'service_etudiant', 'etudiant']
+            )->default('etudiant');
             $table->timestamp('email_verified_at')->nullable();
+            $table->string('email')->unique();
+            $table->string('CodeMassar')->unique();
+            $table->string('CIN')->unique();
+            $table->text('adresse_fr');
+            $table->text('adresse_ar');
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
