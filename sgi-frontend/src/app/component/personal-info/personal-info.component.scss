@@ -1,23 +1,63 @@
-/* styles.scss */
-
-/* Custom styles for responsiveness */
-@media (max-width: 640px) {
-  /* Small Screen Styles */
-  body {
+.container {
+  margin-top: 2rem;
+  margin-left: 40px;
+  .section {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    flex: 0 0 calc(20% - 20px);
+    margin-right: 20px;
+    &:last-child {
+      margin-right: 0;
+    }
+    .form-group {
+      width: 65vw;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin-bottom: 20px;
+      input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        transition: border-color 0.3s;
+        &:focus {
+          border-color: #007bff;
+        }
+        &.empty {
+          // border-color: #dc3545;
+        }
+        &.full {
+          border-color: #28a745;
+        }
+      }
+    }
+  }
+  .btn-primary {
+    width: 10%;
     padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    &:hover {
+      background-color: #0056b3;
+    }
+    &[disabled] {
+      background-color: #6c757d;
+      cursor: not-allowed;
+    }
   }
 }
-
-@media (min-width: 641px) and (max-width: 1007px) {
-  /* Medium Screen Styles */
-  body {
-    padding: 20px;
-  }
+#adresseNaissanceFr, #adresseNaissanceAr{
+  height: 15vh;
 }
-
-@media (min-width: 1008px) {
-  /* Large Screen Styles */
-  body {
-    padding: 30px;
-  }
+label {
+  width: 21vw;
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
 }
