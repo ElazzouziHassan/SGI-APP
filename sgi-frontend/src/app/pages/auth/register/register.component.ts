@@ -13,6 +13,18 @@ export class RegisterComponent {
     email: null,
     password: null
   };
+  get isNomEmpty() {
+    return !this.form.nom;
+  }
+  get isPrenomEmpty() {
+    return !this.form.prenom;
+  }
+  get isEmailEmpty() {
+    return !this.form.email;
+  }
+  get isPasswordEmpty() {
+    return !this.form.password;
+  }
   constructor() {}
   register() {
     console.log(this.form);
