@@ -1,30 +1,28 @@
-<!-- contact.component.html -->
-
 <section class="contact-section">
   <div class="container">
     <div class="row">
       <div class="col-md-6">
-        <h2>Contact Us</h2>
-        <p>If you have any questions or inquiries, feel free to reach out to us.</p>
+        <h2>CONTACTEZ-NOUS</h2>
+        <p>Si vous avez des questions ou des demandes de renseignements, n'hésitez pas à nous contacter.</p>
         <p><strong>Email:</strong> {{ 'estsb.info@contact.com' }}</p>
-        <p><strong>Phone:</strong> +1 123 456 7890</p>
-        <p><strong>Address:</strong> Your University, Street Address, City, Country</p>
+        <p><strong>Phone:</strong> +212 567564598</p>
+        <p><strong>Address:</strong> AV DES FAR B.P 180-24350 SIDI BENNOUR- MAROC</p>
       </div>
       <div class="col-md-6">
-        <form>
+        <form (ngSubmit)="submitForm()" #contactForm="ngForm">
           <div class="mb-3">
-            <label for="name" class="form-label">Your Name</label>
-            <input type="text" class="form-control" id="name" placeholder="Enter your name">
+            <label for="name" class="form-label">Votre Nom Complet</label>
+            <input type="text" class="form-control" id="name" name="name" [(ngModel)]="form.name" required [class.empty]="!form.name" [class.full]="form.name">
           </div>
           <div class="mb-3">
-            <label for="email" class="form-label">Your Email</label>
-            <input type="email" class="form-control" id="email" placeholder="Enter your email">
+            <label for="email" class="form-label">Votre Email</label>
+            <input type="email" class="form-control" id="email" name="email" [(ngModel)]="form.email" required [class.empty]="!form.email" [class.full]="form.email">
           </div>
           <div class="mb-3">
-            <label for="message" class="form-label">Your Message</label>
-            <textarea class="form-control" id="message" rows="5" placeholder="Enter your message"></textarea>
+            <label for="message" class="form-label">Votre Message</label>
+            <textarea class="form-control" id="message" name="message" rows="5" [(ngModel)]="form.message" required [class.empty]="!form.message" [class.full]="form.message"></textarea>
           </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="submit" class="btn btn-primary" [disabled]="!contactForm.form.valid">Submit</button>
         </form>
       </div>
     </div>
