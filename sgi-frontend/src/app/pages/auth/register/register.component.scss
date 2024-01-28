@@ -22,7 +22,7 @@
 
     .form-group {
       margin-bottom: 15px;
-
+      position: relative;
       label {
         display: block;
         margin-bottom: 5px;
@@ -30,13 +30,19 @@
       }
 
       input {
+        transition: border-color 0.3s ease-in-out;
         width: 100%;
         padding: 10px;
         box-sizing: border-box;
         border: 1px solid #ddd;
         border-radius: 4px;
         outline: none;
-
+        &.empty {
+          border-color: red;
+        }
+        &.full {
+          border-color: green;
+        }
         &:focus {
           border-color: #3498db;
         }
