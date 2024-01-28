@@ -10,6 +10,13 @@ export class LoginComponent {
     email: null,
     password: null
   };
+  get isEmailEmpty() {
+    return !this.form.email;
+  }
+  get isPasswordEmpty() {
+    return !this.form.password;
+  }
+  
   constructor() {}
   login() {
     console.log(this.form);
