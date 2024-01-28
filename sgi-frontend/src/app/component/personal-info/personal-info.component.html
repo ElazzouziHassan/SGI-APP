@@ -1,49 +1,61 @@
 <div class="container">
-  <form>
-    <div class="form-group">
-      <label for="codeMassar">Code Massar</label>
-      <input type="text" class="form-control" id="codeMassar">
+  <form (ngSubmit)="submitForm()" #form="ngForm">
+    <div class="section-1 section">
+      <div class="form-group">
+        <label for="codeMassar">Code Massar</label>
+        <input type="text" class="form-control" id="codeMassar" name="codeMassar" [(ngModel)]="formData.codeMassar" required [class.empty]="!formData.codeMassar" [class.full]="formData.codeMassar">
+      </div>
+      <div class="form-group">
+        <label for="cin">N° CIN</label>
+        <input type="text" class="form-control" id="cin" name="cin" [(ngModel)]="formData.cin" required [class.empty]="!formData.cin" [class.full]="formData.cin">
+      </div>
     </div>
-    <div class="form-group">
-      <label for="cin">N° CIN</label>
-      <input type="text" class="form-control" id="cin">
+    <div class="section-2 section">
+      <div class="form-group">
+        <label for="nomFr">Nom (Français)</label>
+        <input type="text" class="form-control" id="nomFr" name="nomFr" [(ngModel)]="formData.nomFr" required [class.empty]="!formData.nomFr" [class.full]="formData.nomFr">
+      </div>
+      <div class="form-group">
+        <label for="nomAr">Nom (Arabe)</label>
+        <input type="text" class="form-control" id="nomAr" name="nomAr" [(ngModel)]="formData.nomAr" required [class.empty]="!formData.nomAr" [class.full]="formData.nomAr">
+      </div>
     </div>
-    <div class="form-group">
-      <label for="nomFr">Nom (Français)</label>
-      <input type="text" class="form-control" id="nomFr">
+    <div class="section-3 section">
+      <div class="form-group">
+        <label for="prenomFr">Prenom (Français)</label>
+        <input type="text" class="form-control" id="prenomFr" name="prenomFr" [(ngModel)]="formData.prenomFr" required [class.empty]="!formData.prenomFr" [class.full]="formData.prenomFr">
+      </div>
+      <div class="form-group">
+        <label for="prenomAr">Prenom (Arabe)</label>
+        <input type="text" class="form-control" id="prenomAr" name="prenomAr" [(ngModel)]="formData.prenomAr" required [class.empty]="!formData.prenomAr" [class.full]="formData.prenomAr">
+      </div>
     </div>
-    <div class="form-group">
-      <label for="nomAr">Nom (Arabe)</label>
-      <input type="text" class="form-control" id="nomAr">
+    <div class="section-4 section">
+      <div class="form-group">
+        <label for="telephone">Numero de Telephone</label>
+        <input type="text" class="form-control" id="telephone" name="telephone" [(ngModel)]="formData.telephone" required [class.empty]="!formData.telephone" [class.full]="formData.telephone">
+      </div>
+      <div class="form-group">
+        <label for="email">Email Adresse</label>
+        <input type="email" class="form-control" id="email" name="email" [(ngModel)]="formData.email" required [class.empty]="!formData.email" [class.full]="formData.email">
+      </div>
     </div>
-    <div class="form-group">
-      <label for="prenomFr">Prenom (Français)</label>
-      <input type="text" class="form-control" id="prenomFr">
+    <div class="">
+      <div class="form-group">
+        <label for="dateNaissance">Date de Naissance</label>
+        <input type="date" class="form-control" id="dateNaissance" name="dateNaissance" [(ngModel)]="formData.dateNaissance" required [class.empty]="!formData.dateNaissance" [class.full]="formData.dateNaissance">
+      </div>
     </div>
-    <div class="form-group">
-      <label for="prenomAr">Prenom (Arabe)</label>
-      <input type="text" class="form-control" id="prenomAr">
+    <div class="section-5">
+      <div class="form-group">
+        <label for="adresseNaissanceFr">Adresse de Naissance (Français)</label>
+        <input type="text" class="form-control" id="adresseNaissanceFr" name="adresseNaissanceFr" [(ngModel)]="formData.adresseNaissanceFr" required [class.empty]="!formData.adresseNaissanceFr" [class.full]="formData.adresseNaissanceFr">
+      </div>
+      <div class="form-group">
+        <label for="adresseNaissanceAr">Adresse de Naissance (Arabe)</label>
+        <input type="text" class="form-control" id="adresseNaissanceAr" name="adresseNaissanceAr" [(ngModel)]="formData.adresseNaissanceAr" required [class.empty]="!formData.adresseNaissanceAr" [class.full]="formData.adresseNaissanceAr">
+      </div>
     </div>
-    <div class="form-group">
-      <label for="telephone">Numero de Telephone</label>
-      <input type="text" class="form-control" id="telephone">
-    </div>
-    <div class="form-group">
-      <label for="dateNaissance">Date de Naissance</label>
-      <input type="date" class="form-control" id="dateNaissance">
-    </div>
-    <div class="form-group">
-      <label for="email">Email Adresse</label>
-      <input type="email" class="form-control" id="email">
-    </div>
-    <div class="form-group">
-      <label for="adresseNaissanceFr">Adresse de Naissance (Français)</label>
-      <input type="text" class="form-control" id="adresseNaissanceFr">
-    </div>
-    <div class="form-group">
-      <label for="adresseNaissanceAr">Adresse de Naissance (Arabe)</label>
-      <input type="text" class="form-control" id="adresseNaissanceAr">
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary" [disabled]="!form.form.valid">Submit</button>
   </form>
 </div>
