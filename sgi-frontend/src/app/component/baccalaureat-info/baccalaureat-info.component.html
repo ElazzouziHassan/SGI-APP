@@ -1,1 +1,40 @@
-<p>baccalaureat-info works!</p>
+<div class="container" style="margin-left: 40px;">
+  <form (ngSubmit)="submitForm()" #form="ngForm">
+    <div class="section" style="display: flex; width: 100%; margin-top: 10vh;">
+      <div class="form-group" style="display: flex; gap: 15px; align-items: center;">
+        <label for="etablissement" style="width: 10vw;">Etablissement</label>
+        <input type="text" class="form-control" id="etablissement" name="etablissement" [(ngModel)]="formData.etablissement" required [class.empty]="!formData.etablissement" [class.full]="formData.etablissement">
+      </div>
+      <div class="form-group">
+        <label for="directionProvinciale" style="width: 30vw;">Direction Provinciale</label>
+        <input type="text" class="form-control" id="directionProvinciale" name="directionProvinciale" [(ngModel)]="formData.directionProvinciale" required [class.empty]="!formData.directionProvinciale" [class.full]="formData.directionProvinciale">
+      </div>
+    </div>
+    <div class="section" style="display: flex; align-items: center; gap: 10px; margin-top: 5vh;">
+      <div class="form-group" style="display: flex; align-items: center; gap: 20px;">
+        <label for="session">Session</label>
+        <input type="text" class="form-control" id="session" name="session" [(ngModel)]="formData.session" required [class.empty]="!formData.session" [class.full]="formData.session" style="width: 18vw;">
+      </div>
+      <div class="form-group" style="display: flex; align-items: center; gap: 20px;">
+        <label for="serie">Serie</label>
+        <input type="text" class="form-control" id="serie" name="serie" [(ngModel)]="formData.serie" required [class.empty]="!formData.serie" [class.full]="formData.serie" style="width: 18vw;">
+      </div>
+      <div class="form-group" style="display: flex; align-items: center; gap: 20px;">
+        <label for="filiere">Filiere</label>
+        <input type="text" class="form-control" id="filiere" name="filiere" [(ngModel)]="formData.filiere" required [class.empty]="!formData.filiere" [class.full]="formData.filiere" style="width: 18vw;">
+      </div>
+    </div>
+    
+    <div class="section" style=" display: flex;">
+      <div class="form-group">
+        <label for="mention" style="margin-right: 27px;">Mention</label>
+        <input type="text" class="form-control" id="mention" name="mention" [(ngModel)]="formData.mention" required [class.empty]="!formData.mention" [class.full]="formData.mention" style="width: 25vw;">
+      </div>
+      <div class="form-group" style="display: flex; align-items: center; gap: 20px;">
+        <label for="moyenneGenerale" style="margin-right: 27px;">Moyene Generale</label>
+        <input type="text" class="form-control" id="moyenneGenerale" name="moyenneGenerale" [(ngModel)]="formData.moyenneGenerale" required [class.empty]="!formData.moyenneGenerale" [class.full]="formData.moyenneGenerale" style="width: 25vw;">
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="!form.form.valid">Submit</button>
+  </form>
+</div>
