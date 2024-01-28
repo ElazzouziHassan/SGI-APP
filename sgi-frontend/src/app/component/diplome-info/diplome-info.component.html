@@ -1,1 +1,67 @@
-<p>diplome-info works!</p>
+<div class="container" style="margin-left: 40px;">
+  <form (ngSubmit)="submitDiplomeForm()" #diplomeForm="ngForm">
+    <div class="section" style="display: flex; gap: 20px; width: 100%; margin-top: 10vh; align-items: center;">
+      <div class="form-group">
+        <label for="Etablissement" style="width: 30vw; display: flex; align-items: center;">Etablissement</label>
+        <input type="text" class="form-control" id="Etablissement" name="Etablissement" [(ngModel)]="diplomeFormData.Etablissement" required [class.empty]="!diplomeFormData.Etablissement" [class.full]="diplomeFormData.Etablissement">
+      </div>
+      <div class="form-group" style="display: flex; align-items: center; gap: 20px;">
+        <label for="Direction_provinciale">Direction Provinciale</label>
+        <input type="text" class="form-control" id="Direction_provinciale" name="Direction_provinciale" [(ngModel)]="diplomeFormData.Direction_provinciale" required [class.empty]="!diplomeFormData.Direction_provinciale" [class.full]="diplomeFormData.Direction_provinciale" style="width: 18vw;">
+      </div>
+    </div>
+    <div class="section" style="display: flex; align-items: center; gap: 10px; margin-top: 5vh;">
+      <div class="form-group" style="display: flex; align-items: center; gap: 20px;">
+        <label for="Promotion">Promotion</label>
+        <input type="text" class="form-control" id="Promotion" name="Promotion" [(ngModel)]="diplomeFormData.Promotion" required [class.empty]="!diplomeFormData.Promotion" [class.full]="diplomeFormData.Promotion" style="width: 18vw;">
+      </div>
+      <div class="form-group" style="display: flex; align-items: center; gap: 20px;">
+        <label for="type">Type</label>
+        <input type="text" class="form-control" id="type" name="type" [(ngModel)]="diplomeFormData.type" required [class.empty]="!diplomeFormData.type" [class.full]="diplomeFormData.type" style="width: 18vw;">
+      </div>
+    </div>
+    
+    <div class="section" style=" display: flex;">
+      <div class="form-group">
+        <label for="Specialite" style="margin-right: 27px;">Specialite</label>
+        <input type="text" class="form-control" id="Specialite" name="Specialite" [(ngModel)]="diplomeFormData.Specialite" required [class.empty]="!diplomeFormData.Specialite" [class.full]="diplomeFormData.Specialite" style="width: 25vw;">
+      </div>
+      <div class="form-group" style="display: flex; align-items: center; gap: 20px;">
+        <label for="nb_annees" style="margin-right: 27px;">Nombre d'annees</label>
+        <input type="text" class="form-control" id="nb_annees" name="nb_annees" [(ngModel)]="diplomeFormData.nb_annees" required [class.empty]="!diplomeFormData.nb_annees" [class.full]="diplomeFormData.nb_annees" style="width: 25vw;">
+      </div>
+    </div>
+    <div class="section" style=" display: flex;">
+      <div class="form-group">
+        <label for="Moyene_s1" style="margin-right: 27px;">Moyenne S1</label>
+        <input type="text" class="form-control" id="Moyene_s1" name="Moyene_s1" [(ngModel)]="diplomeFormData.Moyene_s1" required [class.empty]="!diplomeFormData.Moyene_s1" [class.full]="diplomeFormData.Moyene_s1" style="width: 25vw;">
+      </div>
+      <div class="form-group" style="display: flex; align-items: center; gap: 20px;">
+        <label for="Moyene_s2" style="margin-right: 27px;">Moyenne S2</label>
+        <input type="text" class="form-control" id="Moyene_s2" name="Moyene_s2" [(ngModel)]="diplomeFormData.Moyene_s2" required [class.empty]="!diplomeFormData.Moyene_s2" [class.full]="diplomeFormData.Moyene_s2" style="width: 25vw;">
+      </div>
+    </div>
+    <div class="section" style=" display: flex;">
+      <div class="form-group">
+        <label for="Moyene_s3" style="margin-right: 27px;">Moyenne S3</label>
+        <input type="text" class="form-control" id="Moyene_s3" name="Moyene_s3" [(ngModel)]="diplomeFormData.Moyene_s3" required [class.empty]="!diplomeFormData.Moyene_s3" [class.full]="diplomeFormData.Moyene_s3" style="width: 25vw;">
+      </div>
+      <div class="form-group" style="display: flex; align-items: center; gap: 20px;">
+        <label for="Moyene_s4" style="margin-right: 27px;">Moyenne S4</label>
+        <input type="text" class="form-control" id="Moyene_s4" name="Moyene_s4" [(ngModel)]="diplomeFormData.Moyene_s4" required [class.empty]="!diplomeFormData.Moyene_s4" [class.full]="diplomeFormData.Moyene_s4" style="width: 25vw;">
+      </div>
+    </div>
+    <div class="section" style=" display: flex;">
+      <div class="form-group">
+        <label for="Moyene_generale" style="margin-right: 27px;">Moyenne Generale</label>
+        <input type="text" class="form-control" id="Moyene_generale" name="Moyene_generale" [(ngModel)]="diplomeFormData.Moyene_generale" required [class.empty]="!diplomeFormData.Moyene_generale" [class.full]="diplomeFormData.Moyene_generale" style="width: 25vw;">
+      </div>
+      <div class="form-group" style="display: flex; align-items: center; gap: 20px;">
+        <label for="nb_mention" style="margin-right: 27px;">Nombre de mentions</label>
+        <input type="text" class="form-control" id="nb_mention" name="nb_mention" [(ngModel)]="diplomeFormData.nb_mention" required [class.empty]="!diplomeFormData.nb_mention" [class.full]="diplomeFormData.nb_mention" style="width: 25vw;">
+      </div>
+    </div>
+    
+    <button type="submit" class="btn btn-primary" [disabled]="!diplomeForm.form.valid">Submit</button>
+  </form>
+</div>
