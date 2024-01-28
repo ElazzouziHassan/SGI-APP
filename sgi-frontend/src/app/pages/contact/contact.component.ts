@@ -6,5 +6,23 @@ import { Component } from '@angular/core';
   styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
-
+  public form = {
+    name: null,
+    email: null,
+    message: null
+  };
+  constructor() {}
+  submitForm() {
+    console.log(this.form);
+    // TODO: Implement form submission functionality.
+  }
+  get isNameEmpty() {
+    return !this.form.name;
+  }
+  get isEmailEmpty() {
+    return !this.form.email;
+  }
+  get isMessageEmpty() {
+    return !this.form.message;
+  }
 }
