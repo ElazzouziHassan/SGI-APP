@@ -21,6 +21,8 @@
 
     .form-group {
       margin-bottom: 15px;
+      position: relative;
+
 
       label {
         display: block;
@@ -35,6 +37,14 @@
         border: 1px solid #ddd;
         border-radius: 4px;
         outline: none;
+        padding-left: 10px;
+        transition: border-color 0.3s ease-in-out;
+        &.empty {
+          border-color: red;
+        }
+        &.full {
+          border-color: green;
+        }
 
         &:focus {
           border-color: #3498db;
@@ -80,11 +90,4 @@
   .login-container {
     max-width: 100%;
   }
-}
-
-.ng-invalid:not(form){
-  border-left: 5px solid red;
-}
-.ng-valid:not(form){
-  border-left: 5px solid green;
 }
