@@ -1,1 +1,84 @@
-<p>submission-docs works!</p>
+<div class="container mt-5">
+  <form (ngSubmit)="onSubmit()">
+    <!-- upload Photo -->
+    <div class="form-group">
+      <label for="photo">Photo</label>
+      <div class="custom-file">
+        <input type="file" class="custom-file-input" id="photo" name="photo" accept="image/*" [(ngModel)]="formData.photo">
+        <label class="custom-file-label" for="photo">Choose Photo</label>
+      </div>
+    </div>
+
+    <!-- upload CIN Doccuments -->
+    <div class="form-group">
+      <label for="cin-r">CIN</label>
+      <div class="custom-file" style="margin-bottom: 10px;">
+        <input type="file" class="custom-file-input" id="cin-r" name="cin-r" accept=".pdf" [(ngModel)]="formData.cinR">
+        <label class="custom-file-label" for="cin-r">CIN Recto</label>
+      </div>
+      <div class="custom-file">
+        <input type="file" class="custom-file-input" id="cin-v" name="cin-v" accept=".pdf" [(ngModel)]="formData.cinV">
+        <label class="custom-file-label" for="cin-v">CIN Verso</label>
+      </div>
+    </div>
+
+    <!-- upload Baccalaureat Doccuments -->
+    <div class="form-group">
+      <label for="baccalaureat">Baccalaureat</label>
+      <div class="custom-file" style="margin-bottom: 10px;">
+        <input type="file" class="custom-file-input" id="baccalaureat-r" name="baccalaureat-r" accept=".pdf" [(ngModel)]="formData.bacR">
+        <label class="custom-file-label" for="baccalaureat-r">Baccalaureat Recto</label>
+      </div>
+      <div class="custom-file" style="margin-bottom: 10px;">
+        <input type="file" class="custom-file-input" id="baccalaureat-v" name="baccalaureat-v" accept=".pdf" [(ngModel)]="formData.bacV">
+        <label class="custom-file-label" for="baccalaureat-v">Baccalaureat Verso</label>
+      </div>
+      <div class="custom-file" style="margin-bottom: 10px;">
+        <input type="file" class="custom-file-input" id="relevet-note-bac" name="relevet-note-bac" accept=".pdf" [(ngModel)]="formData.rnBac">
+        <label class="custom-file-label" for="relevet-note-bac">Relvet Note De La {{ 'Baccalaureat' }}</label>
+      </div>
+    </div>
+
+    <!-- upload Diplome Doccuments -->
+    <div class="form-group">
+      <label for="diplome">Diplome Documents</label>
+      <div class="custom-file" style="margin-bottom: 10px;">
+        <input type="file" class="custom-file-input" id="diplome" name="diplome" accept=".pdf" [(ngModel)]="formData.diplome">
+        <label class="custom-file-label" for="diplome">Diplome</label>
+      </div>
+      
+      <div class="custom-file" style="margin-bottom: 10px;">
+        <input type="file" class="custom-file-input" id="relevet-note-s1" name="relevet-note-s1" accept=".pdf" [(ngModel)]="formData.rnS1">
+        <label class="custom-file-label" for="relevet-note-s1">Relvet Note De La 1er Semester</label>
+      </div>
+
+      <div class="custom-file" style="margin-bottom: 10px;">
+        <input type="file" class="custom-file-input" id="relevet-note-s2" name="relevet-note-s2" accept=".pdf" [(ngModel)]="formData.rnS2">
+        <label class="custom-file-label" for="relevet-note-s2">Relvet Note De La 2eme Semester</label>
+      </div>
+
+      <div class="custom-file" style="margin-bottom: 10px;">
+        <input type="file" class="custom-file-input" id="relevet-note-s3" name="relevet-note-s3" accept=".pdf" [(ngModel)]="formData.rnS3">
+        <label class="custom-file-label" for="relevet-note-s3">Relvet Note De La 3eme Semester</label>
+      </div>
+
+      <div class="custom-file" style="margin-bottom: 10px;">
+        <input type="file" class="custom-file-input" id="relevet-note-s4" name="relevet-note-s4" accept=".pdf" [(ngModel)]="formData.rnS4">
+        <label class="custom-file-label" for="relevet-note-s4">Relvet Note De La 4eme Semester</label>
+      </div>
+
+    </div>
+
+    <!-- Upload Demande Manuscript Doccuments -->
+    <div class="form-group">
+      <label for="demande">Demande Manuscript</label>
+      <div class="custom-file" style="margin-bottom: 10px;">
+        <input type="file" class="custom-file-input" id="demande-manuscript" name="demande-manuscript" accept=".pdf" [(ngModel)]="formData.demande">
+        <label class="custom-file-label" for="demande-manuscript">Demande Manuscript</label>
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
