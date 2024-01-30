@@ -1,0 +1,27 @@
+.container {
+  margin-top: 5rem;
+
+  form {
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 2rem;
+
+      label {
+        margin-bottom: 0.5rem;
+      }
+
+      input[type="file"] {
+        margin-top: 0.5rem;
+      }
+
+      .custom-file-label::after {
+        content: "Choose file";
+      }
+    }
+
+    button[type="submit"] {
+      margin-top: 1rem;
+    }
+  }
+}
