@@ -34,3 +34,4 @@ Document your API using tools like Laravel Swagger or tools like OpenAPI. This h
 
 - **Deployment**:
 Choose a hosting platform, configure your server, and deploy your Laravel application.
+
