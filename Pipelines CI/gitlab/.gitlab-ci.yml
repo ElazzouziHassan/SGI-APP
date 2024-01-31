@@ -1,0 +1,39 @@
+stages:
+  - test
+  - deploy
+
+variables:
+  # Définir vos variables d'environnement ici
+  MYSQL_DATABASE: sgi_db
+  MYSQL_USER: root
+  MYSQL_PASSWORD: 
+  APP_ENV: testing
+
+before_script:
+  # Installer les dépendances
+  - composer install --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
+
+  # Configurer l'environnement Laravel
+  - cp .env.example .env
+  - php artisan key:generate
+
+  # Configurer la base de données de test
+  - php artisan migrate --database=mysql_testing
+  - php artisan config:clear
+
+test:
+  stage: test
+  script:
+    # Exécuter les tests PHPUnit
+    - php artisan test
+
+deploy:
+  stage: deploy
+  only:
+    - master  # Déployer uniquement depuis la branche master
+  script:
+    # Déployer l'application (exemple avec Docker)
+    - docker build -t mon_projet .
+    - docker tag mon_projet:latest registry.gitlab.com/votre_nom_utilisateur/mon_projet:latest
+    - docker push registry.gitlab.com/votre_nom_utilisateur/mon_projet:latest
+    - ssh utilisateur@serveur "docker-compose pull && docker-compose up -d"
