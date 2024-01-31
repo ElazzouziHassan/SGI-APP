@@ -25,10 +25,18 @@
     <!-- upload Baccalaureat Doccuments -->
     <div class="form-group">
       <label for="baccalaureat">Baccalaureat</label>
+
+
+
       <div class="custom-file" style="margin-bottom: 10px;">
-        <input type="file" class="custom-file-input" id="baccalaureat-r" name="baccalaureat-r" accept=".pdf" [(ngModel)]="formData.bacR">
+        <input type="file" class="custom-file-input" id="baccalaureat-r" name="baccalaureat-r" accept=".pdf" onselect="selectFile" >
         <label class="custom-file-label" for="baccalaureat-r">Baccalaureat Recto</label>
       </div>
+
+
+
+
+
       <div class="custom-file" style="margin-bottom: 10px;">
         <input type="file" class="custom-file-input" id="baccalaureat-v" name="baccalaureat-v" accept=".pdf" [(ngModel)]="formData.bacV">
         <label class="custom-file-label" for="baccalaureat-v">Baccalaureat Verso</label>
