@@ -1,0 +1,24 @@
+# Utilisez une image Node.js
+FROM node:14 as builder
+
+# Définissez le répertoire de travail
+WORKDIR /app
+
+# Copiez les fichiers de configuration
+COPY . .
+
+# Installez les dépendances
+RUN npm install
+RUN npm run build --prod
+
+# Utilisez une image légère pour l'exécution
+FROM nginx:alpine
+
+# Copiez les fichiers de l'image intermédiaire
+COPY --from=builder /app/dist /usr/share/nginx/html
+
+# Exposez le port Nginx
+EXPOSE 80
+
+# Commande pour démarrer le serveur Nginx
+CMD ["nginx", "-g", "daemon off;"]

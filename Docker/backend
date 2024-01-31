@@ -1,0 +1,29 @@
+# Utilisez une image PHP avec Composer pré-installé
+FROM composer:2 as composer
+
+# Étape de construction pour les dépendances
+FROM php:7.4-cli
+
+# Copiez les dépendances de Composer depuis l'image intermédiaire
+COPY --from=composer /usr/bin/composer /usr/bin/composer
+
+# Définissez le répertoire de travail
+WORKDIR /app
+
+# Copiez les fichiers de configuration
+COPY . .
+
+# Installez les dépendances
+RUN composer install --no-dev --optimize-autoloader
+
+# Utilisez une image légère avec PHP-FPM pour l'exécution
+FROM php:7.4-fpm
+
+# Copiez les fichiers de l'image intermédiaire
+COPY --from=0 /app /app
+
+# Exposez le port PHP-FPM
+EXPOSE 9000
+
+# Commande pour démarrer le serveur PHP-FPM
+CMD ["php-fpm"]
