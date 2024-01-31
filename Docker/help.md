@@ -1,6 +1,6 @@
 # **Docker**:
 
-Ces fichiers Dockerfile sont basés sur des images officielles de PHP, Node.js, Composer, et Nginx. Ils définissent les étapes nécessaires pour installer les dépendances, construire l'application et configurer les serveurs PHP-FPM (Laravel) et Nginx (Angular).
+Ces fichiers Docker sont basés sur des images officielles de PHP, Node.js, Composer, et Nginx. Ils définissent les étapes nécessaires pour installer les dépendances, construire l'application et configurer les serveurs PHP-FPM (Laravel) et Nginx (Angular).
 
 ## **Construction de l'image Docker**:
 
