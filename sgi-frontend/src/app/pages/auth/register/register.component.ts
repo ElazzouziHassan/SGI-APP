@@ -7,12 +7,14 @@ import { NgForm } from '@angular/forms';
   styleUrl: './register.component.scss'
 })
 export class RegisterComponent {
+  
   public form = {
     nom: null,
     prenom: null,
     email: null,
     password: null
   };
+
   get isNomEmpty() {
     return !this.form.nom;
   }
@@ -25,7 +27,9 @@ export class RegisterComponent {
   get isPasswordEmpty() {
     return !this.form.password;
   }
+
   constructor() {}
+  
   register() {
     console.log(this.form);
     // TODO: Implement registration functionality.
